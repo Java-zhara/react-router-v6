@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "./custom-button/custom-button";
 
 export const BlogFilter = ({ postQuery, latest, setSearchParams }) => {
   const [search, setSearch] = useState(postQuery);
@@ -36,7 +37,9 @@ export const BlogFilter = ({ postQuery, latest, setSearchParams }) => {
         />{" "}
         New only 20
       </label>
-      <input type="submit" value="Search" />
+      <Button isSubmit className="button btn">
+        Search
+      </Button>
     </form>
   );
 };

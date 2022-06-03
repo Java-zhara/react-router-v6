@@ -1,5 +1,7 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+
+import { Button } from "../components/custom-button/custom-button";
 
 export const Singlepage = () => {
   const { id } = useParams();
@@ -19,9 +21,13 @@ export const Singlepage = () => {
     <div>
       {post && (
         <>
-          <button onClick={goBack}>Go back</button>
+          <Button onClick={goBack} className="success">
+            Go back
+          </Button>
           {/* Bad approach */}
-          <button onClick={goHome}>Go home</button>
+          <Button onClick={goHome} className="attention btn">
+            Go home
+          </Button>
           {post && (
             <>
               <h1>{post.title}</h1>

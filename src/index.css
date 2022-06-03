@@ -60,3 +60,7 @@ main a:hover {
   color: var(--color-active);
   cursor: default;
 }
+
+.btn {
+  margin-top: 10px;
+}
